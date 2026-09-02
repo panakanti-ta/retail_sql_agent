@@ -12,6 +12,6 @@ def call_llm(messages: list[dict]) -> str:
         "Content-Type": "application/json",
     }
     payload = {"model": GATEWAY_MODEL, "messages": messages, "temperature": 0.0}
-    response = requests.post(GATEWAY_URL, headers=headers, json=payload, timeout=60)
+    response = requests.get(GATEWAY_URL, headers=headers, json=payload, timeout=60)
     response.raise_for_status()
     return response.json()["choices"][0]["message"]["content"]
