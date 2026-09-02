@@ -1,3 +1,10 @@
+import sys
+from pathlib import Path
+
+# Make the repository root importable when this file is run as a script.
+if __package__ in (None, ""):
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
 from src.graph import workflow
 from src.memory import ConversationMemory
 

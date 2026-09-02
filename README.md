@@ -29,10 +29,14 @@ This project implements a Natural Language SQL Data Analyst Agent using LangGrap
    ```
 
 3. **Configure Environment:**
-   Copy `.env.example` to `.env` and enter your Tiger AI Gateway / LLM API parameters:
+   Set these user environment variables with your Tiger AI Gateway / LLM API parameters.
+   Do not commit credentials to the repository. `TIGER_AI_GATEWAY_MODEL` is optional:
    ```powershell
-   copy .env.example .env
+   [Environment]::SetEnvironmentVariable("TIGER_AI_GATEWAY_URL", "<gateway-url>", "User")
+   [Environment]::SetEnvironmentVariable("TIGER_AI_GATEWAY_API_KEY", "<api-key>", "User")
+   [Environment]::SetEnvironmentVariable("TIGER_AI_GATEWAY_MODEL", "gpt-4o-mini", "User")
    ```
+   Restart the terminal after setting persistent user variables.
 
 4. **Initialize Database & Load Data:**
    ```powershell
