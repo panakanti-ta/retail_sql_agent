@@ -2,6 +2,17 @@
 
 This project implements a Natural Language SQL Data Analyst Agent using LangGraph, Python, and SQLite.
 
+## The Agent
+
+The agent:
+
+- Converts natural-language questions into SQLite `SELECT` queries.
+- Validates queries before execution and blocks destructive SQL operations.
+- Executes queries against the local SQLite database.
+- Generates concise business summaries from query results.
+- Maintains the previous three conversation turns as context.
+- Uses the Tiger AI Gateway through an OpenAI-compatible chat-completions endpoint.
+
 ## Project Structure
 ```
 ├── data/                  # CSV datasets
