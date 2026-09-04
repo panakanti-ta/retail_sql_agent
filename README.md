@@ -59,7 +59,12 @@ The agent:
    pytest
    ```
 
-6. **Start Interactive CLI Agent:**
+6. **Start the Streamlit web app:**
    ```powershell
-   python src/app.py
+   streamlit run src/app.py
    ```
+
+   Streamlit will print a local URL (normally `http://localhost:8501`). Open it
+   in a browser to ask questions. The sidebar keeps the current session's
+   history and provides text/Word exports. Each response provides SQL-result
+   Excel export, browser copy buttons, and an executive PowerPoint export.
